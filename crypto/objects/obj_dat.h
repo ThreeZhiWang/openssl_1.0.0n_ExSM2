@@ -62,12 +62,12 @@
  * [including the GNU Public Licence.]
  */
 
-#define NUM_NID 893
+#define NUM_NID 894
 #define NUM_SN 886
 #define NUM_LN 886
-#define NUM_OBJ 840
+#define NUM_OBJ 841
 
-static const unsigned char lvalues[5824]={
+static const unsigned char lvalues[5832]={
 0x00,                                        /* [  0] OBJ_undef */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,               /* [  1] OBJ_rsadsi */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,          /* [  7] OBJ_pkcs */
@@ -908,6 +908,7 @@ static const unsigned char lvalues[5824]={
 0x55,0x04,0x34,                              /* [5814] OBJ_supportedAlgorithms */
 0x55,0x04,0x35,                              /* [5817] OBJ_deltaRevocationList */
 0x55,0x04,0x36,                              /* [5820] OBJ_dmdName */
+0x2a,0x81,0x1c,0xcf,0x55,0x01,0x82,0x2d,     /* [5823] sm2*/
 };
 
 static const ASN1_OBJECT nid_objs[NUM_NID]={
@@ -2351,6 +2352,7 @@ static const ASN1_OBJECT nid_objs[NUM_NID]={
 {"deltaRevocationList","deltaRevocationList",NID_deltaRevocationList,
 	3,&(lvalues[5817]),0},
 {"dmdName","dmdName",NID_dmdName,3,&(lvalues[5820]),0},
+{"", "", NID_SM2, 8, &(lvalues[5823]),0},									/*SM2_curve*/
 };
 
 static const unsigned int sn_objs[NUM_SN]={
@@ -4533,6 +4535,7 @@ static const unsigned int obj_objs[NUM_OBJ]={
 768,	/* OBJ_camellia_256_ofb128          0 3 4401 5 3 1 9 43 */
 759,	/* OBJ_camellia_256_cfb128          0 3 4401 5 3 1 9 44 */
 437,	/* OBJ_pilot                        0 9 2342 19200300 100 */
+893,	  /* SM2							  1 2 156 10197 1 301*/
 776,	/* OBJ_seed_ecb                     1 2 410 200004 1 3 */
 777,	/* OBJ_seed_cbc                     1 2 410 200004 1 4 */
 779,	/* OBJ_seed_cfb128                  1 2 410 200004 1 5 */

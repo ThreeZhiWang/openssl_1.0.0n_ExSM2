@@ -511,6 +511,10 @@
 #define NID_wap_wsg_idm_ecid_wtls12		745
 #define OBJ_wap_wsg_idm_ecid_wtls12		OBJ_wap_wsg_idm_ecid,12L
 
+#define SN_SM2							"SM2"
+#define NID_SM2							893
+#define OBJ_SM2							1,2,156,197,1,301
+
 #define SN_cast5_cbc		"CAST5-CBC"
 #define LN_cast5_cbc		"cast5-cbc"
 #define NID_cast5_cbc		108
